@@ -1,0 +1,2 @@
+#profile-picture img { width:200px; height:200px; float:left; margin-left:20px;}
+#name, #date, #other-data {border:1px solid black; width:300px; margin-left:240px; margin-top:20px; padding-left:7px; padding-top:2px;}

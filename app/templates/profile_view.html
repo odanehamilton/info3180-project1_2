@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ profile.first_name }} {{ profile.last_name }}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+
+
+
+{% block main %}
+
+<div id="profile">
+    <div id="profile-picture">
+    <img src="http://stickyram.com/odanephamilton.com/odane.jpg">
+    </div><!-- profile-picture -->
+    <div id="name">
+       <p>{{ profile.first_name }} {{ profile.last_name }}</p>
+    </div><!-- name -->
+    <div id="other-data">
+        <p>Username: {{ profile.username }}</p>
+        <br/>
+        <p>ID: {{ profile.id_num }}</p>
+        <br/>
+        <p>Sex: {{ profile.sex }}</p>
+        <br/>
+        <p>Age: {{ profile.age }}</p>
+        <br/>
+    </div> <!-- other-data -->
+</div><!-- profile -->
+
+<h3>Navigate to home page <a href="/">here</a></h3>
+{% endblock %}
+
+
+

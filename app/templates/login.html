@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            
+        </title>
+        <link href ="static/bootstrap.min.css" rel="stylesheet" media="screen"> 
+    </head>
+    <body>
+        <div class="container">
+            <h1>Please Login</h1> <br/>
+            <form action="" method="post">
+                <input type="text" name="username" placeholder="username" value="{{ request.form.username }}"/>
+                <input type="password" name="password" placeholder="password" value="{{ request.form.password }}"/>
+                <input type="submit" value="Login" class="btn btn-default" />
+            </form>
+            {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
