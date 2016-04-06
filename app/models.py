@@ -6,7 +6,7 @@ class Myprofile(db.Model):
     username = db.Column(db.String(80), unique=True)
     age = db.Column(db.Integer)
     sex = db.Column(db.String(8))
-    image = db.Column(db.LargeBinary)
+   # image = db.Column(db.LargeBinary)
 
  
 

@@ -19,7 +19,7 @@ class ProfileForm(Form):
      username = TextField('Username', validators=[Required()])
      age = IntegerField('Age', validators=[Required()])
      sex = RadioField('Sex', choices=[('Male','Male'),('Female','Female')])
-     image = FileField('image', [validators.regexp('\w+\.jpg$')])
+     #image = FileField('image', [validators.regexp('\w+\.jpg$')])
 
 
 
@@ -71,12 +71,12 @@ def profile_add():
         username = request.form['username']
         age = request.form['age']
         sex = request.form['sex']
-        image = request.form['image']
+       # image = request.form['image']
 
 
         # write the information to the database
         newprofile = Myprofile(first_name=first_name,
-                               last_name=last_name, username=username, age=age, sex=sex, image=image)
+                               last_name=last_name, username=username, age=age, sex=sex)#, image=image)
         db.session.add(newprofile)
         db.session.commit()
 
